@@ -30,7 +30,19 @@ const Navbar = () => {
       {/* NAVBAR */}
       <div className="container py-6">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold">NavbarScroll</div>
+         <Link to="/" className="inline-block">
+
+          <div className="navbar-shehwa flex items-center gap-1 leading-none">
+            <span className="logo-s">S</span>
+
+            <div className="flex flex-col">
+              <h1 className="text-xl font-bold tracking-wide">HEHWA</h1>
+              <p className="text-[10px] tracking-[0.3em] font-semibold opacity-80">
+                TECHNOLOGIES
+              </p>
+            </div>
+          </div>
+          </Link>
 
           <ul className="hidden md:flex space-x-8 font-bold">
             <li className="cursor-pointer hover:text-blue-600">
@@ -56,7 +68,7 @@ const Navbar = () => {
             >
               <Link to="/services">SERVICES</Link>
             </li>
-<li className="cursor-pointer hover:text-blue-600">
+            <li className="cursor-pointer hover:text-blue-600">
               <Link to="/plans">PLANS</Link>
             </li>
             <li className="cursor-pointer hover:text-blue-600">
