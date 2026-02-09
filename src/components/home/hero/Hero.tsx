@@ -8,9 +8,8 @@ import MernImg from "../../../assets/MERN edited.png";
 const Hero = () => {
   return (
     <section
-      className="
-        relative min-h-screen flex items-center justify-center overflow-hidden
-       dark:bg-slate-950
+      className="Hero-section
+        relative min-h-screen flex items-center justify-center bg-white overflow-hidden
         transition-colors duration-300
       "
     >
