@@ -738,4 +738,242 @@ align-content: stretch;
   opacity: 0.85;
 }
 
+/* ===== FAQ SECTION ===== */
+
+.faq-section {
+  padding: 140px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.faq-left {
+  width: 35%;
+}
+
+.faq-heading {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #4b4b4b;
+  line-height: 0.9;
+}
+
+.faq-subtext {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #555;
+  max-width: 320px;
+}
+
+.faq-right {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ============================= */
+/* ===== FAQ SECTION =========== */
+/* ============================= */
+
+.faq-section {
+  padding: 160px 0;
+@apply  dark:text-white
+}
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100px;
+  width: 100%;
+  min-height: 200vh; /* keeps sticky effect working */
+}
+
+.faq-left {
+  width: 50%;
+  position: sticky;
+  top: 140px;
+  align-self: flex-start;
+}
+
+.faq-heading {
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #4b4b4b;
+  letter-spacing: -2px;
+  line-height: 0.9;
+}
+
+.faq-subtext {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #555;
+   max-width: 380px;
+     line-height: 1.6;
+  /* max-width: 320px; */
+}
+
+
+/* ============================= */
+/* ===== Sticky Right Side ===== */
+/* ============================= */
+
+.faq-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Scrollbar styling */
+.faq-right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.faq-right::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+}
+
+/* ============================= */
+/* ===== FAQ ITEM ============== */
+/* ============================= */
+
+.faq-item {
+  background:white;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.faq-item {
+  @apply  dark:bg-black dark:text-white
+         
+}
+.faq-question {
+  width: 100%;
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.faq-question span {
+  text-align: left;
+  max-width: 90%;
+}
+
+
+.faq-answer {
+  padding: 0 26px 22px 26px;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* =============================== */
+/* ===== CONTACT SECTION ========= */
+/* =============================== */
+
+.contact-section {
+  padding: 160px 0;
+}
+
+/* Heading */
+
+.contact-heading {
+  text-align: center;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #3f3f3f;
+  margin-bottom: 60px;
+}
+
+/* Card */
+
+.contact-card {
+  max-width: 760px;
+  margin: auto;
+  background: #efefef;
+  border-radius: 30px;
+  padding: 60px 50px;
+}
+
+/* Form */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Group */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Inputs */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: #e4e4e4;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 20px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-group textarea {
+  border-radius: 20px;
+  min-height: 140px;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #dcdcdc;
+}
+
+/* Button */
+
+.contact-btn {
+  margin-top: 10px;
+  padding: 18px;
+  border-radius: 40px;
+  border: 1px solid #000;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  @apply dark:border-black dark:text-white dark:bg-black
+}
+
+.contact-btn:hover {
+  background: #000;
+  color: #fff;
+  @apply dark:bg-white dark:text-black
+}
+
 }
