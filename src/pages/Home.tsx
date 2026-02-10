@@ -1,7 +1,4 @@
 import Hero from "../components/home/hero/Hero";
-import Services from "../components/home/Services";
-import Portfolio from "../components/home/Portfolio";
-import Testimonials from "../components/home/Testimonials";
 import LoopBorder from "../components/home/loopboard/LoopBorder";
 import ImageSlider from "../components/home/slider/ImageSlider";
 import StoryInlineSection from "../components/home/scroll/ScrollRevealSection";
@@ -16,6 +13,7 @@ import ContactSection from "../components/home/contact/contactsection";
 export default function Home() {
   return (
     <>
+  
       <Hero />
       <LoopBorder/>
       <ImageSlider/>
@@ -26,11 +24,7 @@ export default function Home() {
     <DomainCardSection/>
  <ClientsSection/>
  <FaqSection/>
- <ContactSection/>
-      <Services />
-      <Portfolio />
-      <Testimonials />
-  
+ <ContactSection/>  
     </>
   );
 }
