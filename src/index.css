@@ -8,10 +8,7 @@
 html,
 body {
   @apply bg-[#EEF4F4] text-slate-700 transition-colors duration-300;
-<<<<<<< HEAD
-   overflow-x: hidden;
-=======
->>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb
+  overflow-x: hidden;
 }
 body {
   @apply dark:bg-slate-950 dark:text-slate-200;
@@ -1112,12 +1109,11 @@ align-content: stretch;
 .flag-icon {
   margin-right: 8px;
   vertical-align: middle;
-    @apply dark:text-white;
+  @apply dark:text-white;
 }
 
 
 }
-<<<<<<< HEAD
 
 /* ===================================================== */
 /* ================= RESPONSIVE START ================== */
@@ -1484,5 +1480,3 @@ transform: none!important;
 /* ===================================================== */
 /* ================= RESPONSIVE END ==================== */
 /* ===================================================== */
-=======
->>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb

@@ -1,9 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-<<<<<<< HEAD
 import { useRef, useEffect, useState } from "react";
-=======
-import { useRef } from "react";
->>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb
 import FaqItem from "./faqItem";
 
 const faqData = [
@@ -34,12 +30,7 @@ const faqData = [
   },
   {
     question: "How long does a project take?",
-<<<<<<< HEAD
     answer: "Most projects range between 4–12 weeks depending on complexity.",
-=======
-    answer:
-      "Most projects range between 4–12 weeks depending on complexity.",
->>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb
   },
   {
     question: "Do you provide UI/UX design?",
@@ -60,17 +51,13 @@ const faqData = [
 
 const FaqSection = () => {
   const ref = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
   const [isMobile, setIsMobile] = useState(false);
-=======
->>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center center"],
   });
 
-<<<<<<< HEAD
   const headingX = useTransform(scrollYProgress, [0, 0.4], ["-30%", "0%"]);
 
   useEffect(() => {
@@ -105,29 +92,10 @@ const FaqSection = () => {
           <motion.h2
             className="text-4xl md:text-6xl font-bold mb-6"
             style={!isMobile ? { x: headingX } : {}}
-=======
-  const headingX = useTransform(
-    scrollYProgress,
-    [0, 0.4],
-    ["-30%", "0%"]
-  );
-
-  return (
-    <section ref={ref} className="faq-section container">
-
-      <div className="faq-container">
-
-        {/* LEFT SIDE (Sticky) */}
-        <div className="faq-left">
-          <motion.h2
-            className="faq-heading"
-            style={{ x: headingX }}
->>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb
           >
             FAQ'S
           </motion.h2>
 
-<<<<<<< HEAD
           <p className="text-gray-500 max-w-md mx-auto md:mx-0">
             Explore answers to frequently asked questions about our solutions
             and capabilities. For further assistance, feel free to contact us.
@@ -137,16 +105,6 @@ const FaqSection = () => {
 
         {/* RIGHT SIDE */}
         <div className="md:w-1/2 w-full">
-=======
-          <p className="faq-subtext">
-            Explore answers to frequently asked questions about our solutions
-            and capabilities. For further assistance, feel free to contact us.
-          </p>
-        </div>
-
-        {/* RIGHT SIDE (Normal Flow) */}
-        <div className="faq-right">
->>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb
           {faqData.map((item, index) => (
             <FaqItem
               key={index}
@@ -162,8 +120,4 @@ const FaqSection = () => {
   );
 };
 
-<<<<<<< HEAD
 export default FaqSection;
-=======
-export default FaqSection;
->>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb

@@ -28,9 +28,9 @@ const Navbar = () => {
       onMouseLeave={() => setHovered(null)}
     >
       {/* NAVBAR */}
-      <div className="container py-6">
+      <div className="container py-4 md:py-6">
         <div className="flex items-center justify-between">
-         <Link to="/" className="inline-block">
+          <Link to="/" className="inline-block" onClick={() => { setOpen(false); setHovered(null); }}>
 
           <div className="navbar-shehwa flex items-center gap-1 leading-none">
             <span className="logo-s">S</span>
@@ -44,7 +44,8 @@ const Navbar = () => {
           </div>
           </Link>
 
-          <ul className="hidden md:flex space-x-8 font-bold">
+          {/* Desktop menu */}
+          <ul className="hidden md:flex space-x-6 lg:space-x-8 font-bold">
             <li className="cursor-pointer hover:text-blue-600">
               <Link to="/">HOME</Link>
             </li>
@@ -76,7 +77,8 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className="flex items-center gap-4">
+          {/* Theme toggle + mobile burger */}
+          <div className="flex items-center gap-3 md:gap-4">
             <button
               onClick={() =>
                 setTheme((t) => (t === "light" ? "dark" : "light"))
@@ -85,12 +87,56 @@ const Navbar = () => {
               {theme === "light" ? "🌙" : "☀️"}
             </button>
 
-            <button className="md:hidden" onClick={() => setOpen(!open)}>
-              ☰
+            <button
+              className="md:hidden text-2xl"
+              aria-label="Toggle navigation menu"
+              onClick={() => setOpen((prev) => !prev)}
+            >
+              {open ? "✕" : "☰"}
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile dropdown menu */}
+      {open && (
+        <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-950">
+          <div className="container py-4">
+            <ul className="flex flex-col gap-3 font-semibold">
+              <li>
+                <Link to="/" onClick={() => { setOpen(false); setHovered(null); }}>
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link to="/portfolio" onClick={() => { setOpen(false); setHovered(null); }}>
+                  PORTFOLIO
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => { setOpen(false); setHovered(null); }}>
+                  ABOUT
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" onClick={() => { setOpen(false); setHovered(null); }}>
+                  SERVICES
+                </Link>
+              </li>
+              <li>
+                <Link to="/plans" onClick={() => { setOpen(false); setHovered(null); }}>
+                  PLANS
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" onClick={() => { setOpen(false); setHovered(null); }}>
+                  CONTACT
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
 
       {/* HOVER PREVIEW */}
       {hovered && (
