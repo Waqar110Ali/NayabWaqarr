@@ -23,4 +23,8 @@ const ParallaxCard = ({ image, x, rotate }: ParallaxCardProps) => {
   );
 };
 
+<<<<<<< HEAD
 export default ParallaxCard;
+=======
+export default ParallaxCard;
+>>>>>>> a72b0953b8e534481b748b3c33f8780e3c4d8abb
